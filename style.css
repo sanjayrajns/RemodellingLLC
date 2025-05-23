@@ -1,0 +1,1649 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222; /* Dark background as seen in the image */
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 30px;
+    position: relative; /* For dropdown */
+}
+
+.nav-links ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+/* Dropdown Styles */
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position below the parent */
+    left: 0;
+}
+
+.nav-links .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-transform: none; /* Reset uppercase for dropdown items */
+    font-size: 13px;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #555;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links .dropdown i.fa-chevron-down {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.nav-icons i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-icons i:hover {
+    color: #007bff; /* Example hover color */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Adjust as needed */
+    margin-top: 70px; /* To account for fixed navbar height */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Align "MODERN" to the bottom-left */
+    justify-content: flex-start;
+    padding-bottom: 50px;
+    padding-left: 50px; /* To match image margin */
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    filter: brightness(0.8); /* Slightly darken the image */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)); /* Gradient to darken bottom */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align both to the bottom */
+    padding-bottom: 0; /* Remove default padding-bottom from container */
+    font-size: 10px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10vw; /* Responsive font size */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.get-template-button {
+    text-align: right;
+    margin-bottom: 20px; /* Adjust if needed to align with image */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Example blue color */
+    color: #fff;
+    border: 1px solid #007bff;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Construction Intro Section */
+.construction-intro {
+    padding: 100px 0;
+    background-color: #f8f8f8; /* Light background as in the image */
+}
+
+.construction-intro .container {
+    display: flex;
+    gap: 30vh; /* Adjust gap between columns */
+    align-items: flex-start;
+}
+
+.intro-left {
+    flex: 1;
+    max-width: 50%; /* Adjust width as needed */
+}
+
+.intro-left h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5vw; /* Responsive font size */
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.intro-left p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.btn-secondary {
+    background-color: #e62b2b; /* Red button color from image */
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    padding: 15px 30px;
+}
+
+.btn-secondary:hover {
+    background-color: #c92222;
+}
+
+.btn-secondary i {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.intro-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 50%; /* Adjust width as needed */
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-item i {
+    font-size: 28px;
+    color: #007bff; /* Example icon color, you might need to adjust */
+}
+
+.feature-item p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* In style.css */
+
+/* Our Projects Section */
+.our-projects {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.our-projects .explore-text {
+    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat */
+    font-size: 15px; /* Slightly larger */
+    font-weight: 700; /* Bolder */
+    color: #555; /* Slightly darker than #888 for more prominence */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* More spread out */
+    margin-bottom: 10px;
+    text-align: left; /* Ensure it's left-aligned as in the design */
+}
+
+.our-projects h3 {
+    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat */
+    font-size: 60px; /* Greatly increased size for impact */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px; /* Keep space below heading */
+    color: #333;
+    letter-spacing: -2px; /* A bit tighter for large text */
+    text-align: left; /* Ensure it's left-aligned as in the design */
+}
+
+
+/* Our Projects Section */
+.our-projects {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.our-projects .explore-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: left; /* Ensure it's left-aligned as in the design */
+}
+
+.our-projects h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px; /* Increased size for impact */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #333;
+    letter-spacing: -2px;
+    text-align: left; /* Ensure it's left-aligned as in the design */
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: auto;
+    max-width: none;
+}
+
+.project-item img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Base style for text below image (before hover) */
+.project-info {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 10vh; 
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.project-info .project-location {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.project-info .project-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* Styles for the hover overlay */
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #e62b2b;
+    color: #fff;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 3;
+}
+
+.project-overlay .project-location {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.project-overlay .project-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.project-overlay .project-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.project-overlay .view-project-link {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px; /* Base margin-bottom for link */
+    transition: opacity 0.4s ease;
+}
+
+.project-overlay .view-project-link:hover {
+    text-decoration: underline;
+}
+
+.project-overlay .view-project-link i {
+    font-size: 14px;
+}
+
+/* Hover effects */
+.project-item:hover img {
+    transform: scale(1.08);
+}
+
+.project-item:hover .project-info {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.project-item:hover .project-overlay {
+    height: calc(140% - 60vh); /* This calculation relies on img height being 250px */
+    padding: 30px 20px; /* INCREASED VERTICAL PADDING for hover state content */
+    opacity: 1;
+}
+
+.project-overlay {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* Footer (Basic) */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .container {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 12vw;
+    }
+
+    .construction-intro .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px; /* Add gap when stacking */
+    }
+
+    .intro-left, .intro-right {
+        max-width: 90%;
+        width: 100%; /* Take full width within max-width */
+        text-align: center;
+        margin-left: auto; /* Revert auto-margin when stacked */
+        margin-right: auto;
+    }
+
+    .intro-left h2 {
+        font-size: 6vw;
+    }
+
+    .feature-item {
+        justify-content: center;
+    }
+
+    .our-projects h3 {
+        font-size: 50px; /* Smaller on medium screens */
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .get-template-button {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 15vw;
+    }
+
+    .intro-left h2 {
+        font-size: 8vw;
+    }
+
+    .our-projects h3 {
+        font-size: 8vw; /* Responsive font size for smaller screens */
+        text-align: center; /* Center on smaller screens */
+    }
+    .our-projects .explore-text {
+        text-align: center; /* Center on smaller screens */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack vertically on smaller screens */
+        gap: 30px; /* Maintain gap for vertical stacking */
+    }
+    .project-item .project-info {
+        min-height: 120px; /* Ensure consistency */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo .logo-text {
+        font-size: 24px;
+    }
+
+    .navbar .nav-icons {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .construction-intro {
+        padding: 60px 0;
+    }
+
+    .intro-left h2 {
+        font-size: 10vw;
+    }
+
+    .our-projects h3 {
+        font-size: 10vw; /* Even smaller on very small screens */
+    }
+    .project-item .project-info {
+        min-height: 100px; /* Can reduce slightly more for very small screens */
+    }
+}
+
+/* About Us Intro Section (New Section) */
+.about-us-intro {
+    background-color: #000;
+    padding: 60px 0; /* Reduced vertical padding from 80px to 60px */
+    color: #fff;
+    text-align: center;
+}
+
+.about-us-intro .explore-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px; /* Slightly reduced margin-bottom from 30px to 25px */
+    text-align: center;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px; /* Slightly reduced margin-bottom from 50px to 40px */
+}
+
+.about-images img {
+    width: 250px;
+    height: 100px; /* You can also reduce this if images themselves are too tall */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-content-area {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content-area h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px; /* Slightly reduced margin-bottom from 25px to 20px */
+    color: #fff;
+}
+
+.about-content-area p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px; /* Slightly reduced margin-bottom from 40px to 30px */
+}
+
+/* Rest of your CSS remains unchanged */
+
+/* New Button Style for "About us" */
+.btn-tertiary {
+    background-color: transparent; /* Transparent background */
+    color: #fff; /* White text */
+    border: 1px solid #fff; /* White border */
+    font-size: 15px;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-tertiary:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+}
+
+.btn-tertiary i {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+
+/* Responsive Adjustments for About Us Intro Section */
+@media (max-width: 992px) {
+    .about-content-area h3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-intro {
+        padding: 60px 0;
+    }
+    .about-images {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center stacked images */
+        gap: 20px;
+    }
+    .about-images img {
+        width: 80%; /* Make images take more width on smaller screens */
+        max-width: 300px; /* Limit their max width */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+    .about-content-area {
+        padding: 0 20px; /* Add padding for text on smaller screens */
+    }
+    .about-content-area h3 {
+        font-size: 6vw; /* Responsive font size */
+    }
+    .about-content-area p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content-area h3 {
+        font-size: 7vw;
+    }
+    .about-images img {
+        width: 90%;
+    }
+}
+
+/* Our Services Section */
+.our-services-section {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.our-services-section .what-we-do-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.our-services-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #333;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Still 4 columns */
+    gap: 30px; /* Space between service cards */
+    margin-bottom: 60px;
+}
+
+/* Corrected .service-item styles for clickable card with hover */
+.service-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex; /* This ensures it behaves like a block-level element */
+    flex-direction: column;
+    text-decoration: none; /* Remove underline for anchor tag */
+    color: inherit; /* Inherit text color for anchor tag */
+    /* Re-added transition properties */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* RE-ADDED HOVER EFFECT FOR SERVICE ITEMS */
+.service-item:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+    border-color: #e62b2b; /* Red border on hover */
+}
+
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 15px 25px;
+}
+
+.service-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+}
+
+.service-icon {
+    font-size: 30px;
+    color: #e62b2b;
+}
+
+.service-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.services-button {
+    text-align: center;
+}
+
+/* Responsive Adjustments for Services Section */
+@media (max-width: 1200px) { /* Adjust breakpoint if 4 columns become too small */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* On slightly smaller screens, go to 3 columns */
+    }
+}
+
+@media (max-width: 992px) {
+    .our-services-section h3 {
+        font-size: 50px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* On medium screens, go to 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .our-services-section {
+        padding: 60px 0;
+    }
+    .our-services-section .what-we-do-text,
+    .our-services-section h3 {
+        text-align: center;
+    }
+    .our-services-section h3 {
+        font-size: 8vw;
+        margin-bottom: 40px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack service cards vertically on small screens */
+        gap: 30px;
+    }
+    .service-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-services-section h3 {
+        font-size: 10vw;
+    }
+    .service-header {
+        padding: 20px 20px 10px 20px;
+    }
+    .service-title {
+        font-size: 20px;
+    }
+    .service-icon {
+        font-size: 28px;
+    }
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 80px 0;
+}
+
+.contact-us-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block; /* Make the anchor a block element */
+    margin-bottom: 15px;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+.contact-info address {
+    font-style: normal;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-form h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .contact-info {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 28px;
+    }
+}
+
+/* --- Footer Call to Action Section --- */
+.footer-cta {
+    background-color: #000; /* Black background */
+    color: #fff;
+    padding: 80px 0; /* Vertical padding */
+}
+
+.footer-cta .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.cta-content {
+    flex: 1; /* Allows it to grow */
+    max-width: 50%; /* Limits its width */
+    text-align: left;
+    margin-right: 30px; /* Space from nav links */
+}
+
+.cta-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.cta-nav-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between links */
+    justify-content: flex-end; /* Align to right */
+}
+
+.cta-nav-links ul li a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.cta-nav-links ul li a:hover {
+    color: #e62b2b; /* Red hover color */
+}
+
+/* --- Main Footer --- */
+.main-footer {
+    background-color: #1a1a1a; /* Darker black background */
+    color: #fff;
+    padding: 60px 0 20px 0; /* Top, right/left, bottom padding */
+    font-size: 15px;
+}
+
+.main-footer .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between columns */
+    margin-bottom: 50px; /* Space above copyright */
+}
+
+.main-footer .footer-col {
+    text-align: left;
+}
+
+.main-footer .footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.main-footer .footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-footer .footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-col ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.main-footer .footer-col ul li a:hover {
+    color: #e62b2b; /* Red hover color */
+}
+
+.main-footer .footer-col a { /* For email and phone links */
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-col a:hover {
+    color: #e62b2b;
+}
+
+.main-footer .footer-col-right p {
+    color: rgba(255, 255, 255, 0.5); /* Lighter text for "Designed by" */
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: right; /* Align to right as in image */
+}
+
+.main-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Thin separator line */
+    padding-top: 20px;
+    text-align: center;
+}
+
+.main-footer .footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Adjustments for Footer */
+@media (max-width: 992px) {
+    .footer-cta .container {
+        flex-direction: column; /* Stack CTA content and nav links */
+        text-align: center;
+    }
+    .cta-content {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px; /* Space between CTA content and nav links */
+    }
+    .cta-content h2 {
+        font-size: 32px;
+    }
+    .cta-nav-links ul {
+        justify-content: center; /* Center nav links when stacked */
+    }
+    .main-footer .footer-columns {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        text-align: left; /* Ensure text alignment is left */
+    }
+    .main-footer .footer-col-right {
+        text-align: left; /* Revert right alignment when stacked */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-cta {
+        padding: 60px 0;
+    }
+    .cta-content h2 {
+        font-size: 7vw;
+    }
+    .main-footer {
+        padding: 40px 0 15px 0;
+    }
+    .main-footer .footer-columns {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+        gap: 40px; /* More space between stacked columns */
+    }
+    .main-footer .footer-col h4 {
+        margin-bottom: 15px;
+    }
+    .main-footer .footer-col-right {
+        text-align: left; /* Ensure left alignment */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-content h2 {
+        font-size: 8vw;
+    }
+    .cta-nav-links ul {
+        gap: 15px; /* Smaller gap for nav links */
+    }
+}
+
+/* --- About Us - Our Story Section --- */
+.about-story-section {
+    padding: 80px 0;
+    background-color: #fff; /* White background */
+}
+
+.about-story-section .container {
+    max-width: 1200px; /* Adjust container width as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title-left { /* For headings like "Our Story" */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #333;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+.story-content-wrapper {
+    display: flex;
+    gap: 40px; /* Space between image and text */
+    align-items: flex-start; /* Align content to the top */
+}
+
+.story-image-left {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 45%; /* Adjust width for the left image */
+}
+
+.story-image-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+    max-height: 600px; /* Limit height of main image */
+}
+
+.story-text-right {
+    flex-grow: 1; /* Allow text content to take remaining space */
+    text-align: left;
+}
+
+.story-text-right h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.story-text-right p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.story-text-right .btn-secondary { /* Styling for the "Explore Projects" button */
+    margin-top: 10px; /* Adjust spacing below paragraph */
+    margin-bottom: 40px; /* Space before small image */
+}
+
+.story-image-small {
+    margin-bottom: 30px; /* Space between small image and features list */
+}
+
+.story-image-small img {
+    width: 100%;
+    max-width: 450px; /* Limit width of this smaller image */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.story-features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.story-features-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex; /* For icon alignment */
+    align-items: flex-start; /* Align icon to top of text */
+    gap: 12px; /* Space between icon and text */
+}
+
+.story-features-list li i {
+    color: #007bff; /* Icon color, consistent with intro section */
+    font-size: 20px; /* Larger icons */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-top: 2px; /* Slight adjustment for visual alignment */
+}
+
+/* Responsive Adjustments for About Us - Our Story Section */
+@media (max-width: 992px) {
+    .section-title-left {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    .story-content-wrapper {
+        flex-direction: column; /* Stack image and text */
+        gap: 30px;
+    }
+    .story-image-left {
+        width: 100%; /* Full width when stacked */
+        max-width: 600px; /* Limit max width for large screens */
+        margin: 0 auto; /* Center image */
+    }
+    .story-text-right {
+        text-align: center; /* Center text when stacked */
+    }
+    .story-text-right h4 {
+        font-size: 32px;
+    }
+    .story-image-small {
+        margin: 0 auto 30px auto; /* Center small image */
+    }
+    .story-features-list {
+        text-align: left; /* Keep feature list text aligned left */
+        padding: 0 20px; /* Add some padding to prevent text from touching edges */
+    }
+    .story-features-list li {
+        justify-content: center; /* Center list items if preferred, or remove */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-story-section {
+        padding: 60px 0;
+    }
+    .section-title-left {
+        font-size: 8vw; /* More aggressive responsive font size */
+        margin-bottom: 30px;
+        text-align: center; /* Center title on smaller screens */
+    }
+    .story-text-right h4 {
+        font-size: 6vw;
+    }
+    .story-text-right p {
+        font-size: 16px;
+    }
+    .story-features-list li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-left {
+        font-size: 10vw;
+    }
+    .story-text-right h4 {
+        font-size: 8vw;
+    }
+    .story-image-small img {
+        max-width: 100%;
+    }
+}
+
+.service-detail-slider h1 {
+    margin-bottom: 20px;
+} 
+.service-includes {
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.service-detail-content{
+    margin-bottom: 30px;
+}
+
+/* --- Service Detail Slider --- */
+.service-detail-slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Match the container width for consistency */
+    margin: 80px auto 50px auto; /* Center and provide space below */
+    overflow: hidden;
+    border-radius: 8px; /* Consistent with the original image style */
+}
+
+.service-slides {
+    display: flex; /* Use flex to arrange slides side-by-side */
+    width: 100%; /* Initially, this will hold all slides */
+    transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+}
+
+.service-slide {
+    flex-shrink: 0; /* Prevent slides from shrinking */
+    width: 100%; /* Each slide takes full width of its container */
+    height: 400px; /* Fixed height for consistency, adjust as needed */
+    display: block;
+    position: relative; /* Needed for img object-fit if it's the background */
+    overflow: hidden; /* Ensure image doesn't overflow its own slide div */
+}
+
+.service-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire slide area without distortion */
+    display: block; /* Remove extra space below image */
+}
+
+/* Navigation Arrows */
+.service-prev, .service-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    z-index: 10; /* Ensure arrows are on top */
+}
+
+.service-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.service-prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.service-prev:hover, .service-next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Dots for navigation */
+.service-dots-container {
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the slider */
+    width: 100%;
+    z-index: 10; /* Ensure dots are on top */
+}
+
+.service-dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.service-dot.active, .service-dot:hover {
+    background-color: #717171;
+}
+
+/* Responsive adjustments for the slider */
+@media (max-width: 768px) {
+    .service-detail-slider {
+        height: 350px; /* Adjust height for smaller screens */
+        margin-bottom: 30px;
+    }
+    .service-slide {
+        height: 350px; /* Match container height */
+    }
+    .service-prev, .service-next {
+        font-size: 20px;
+        padding: 12px;
+    }
+    .service-dots-container {
+        padding: 10px 0;
+    }
+    .service-dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-detail-slider {
+        height: 250px;
+    }
+    .service-slide {
+        height: 250px;
+    }
+}
+
+
+/* --- Building Your Vision Section --- */
+.building-vision-section {
+    padding: 80px 0; /* Adjust padding as needed */
+    background-color: #fff; /* White background */
+}
+
+.building-vision-container {
+    display: flex;
+    gap: 60px; /* Space between the image and content */
+    align-items: center; /* Vertically align items in the middle */
+    max-width: 1200px; /* Adjust container width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.building-vision-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 55%; /* Adjust width for the image side */
+}
+
+.building-vision-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Slightly rounded corners */
+    object-fit: cover;
+    max-height: 600px; /* Limit image height */
+}
+
+.building-vision-content {
+    flex-grow: 1; /* Allow content to take remaining space */
+    text-align: left;
+    color: #333;
+}
+
+.section-title-right { /* For headings like "Building Your Vision" */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px; /* Adjust size based on design */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #333;
+    letter-spacing: -1px;
+    text-align: left; /* Ensure it's left-aligned */
+}
+
+.building-vision-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.vision-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for features */
+    gap: 20px; /* Space between feature boxes */
+    margin-bottom: 40px;
+}
+
+.feature-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f9f9f9; /* Light background for boxes */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-box:hover {
+    background-color: #f0f0f0;
+    border-color: #c0c0c0;
+}
+
+.feature-box i {
+    font-size: 28px; /* Icon size */
+    color: #007bff; /* Accent color for icons */
+    flex-shrink: 0;
+}
+
+.feature-box p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+.collaborate-now-link {
+    display: inline-flex; /* To align text and icon */
+    align-items: center;
+    gap: 8px;
+    color: #007bff; /* Consistent link color */
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.collaborate-now-link:hover {
+    color: #0056b3;
+}
+
+/* Responsive Adjustments for Building Your Vision Section */
+@media (max-width: 992px) {
+    .building-vision-container {
+        flex-direction: column; /* Stack image and content vertically */
+        gap: 40px;
+    }
+    .building-vision-image {
+        width: 100%; /* Full width when stacked */
+        max-width: 700px; /* Limit max width for readability */
+        margin: 0 auto; /* Center image */
+    }
+    .building-vision-content {
+        text-align: center; /* Center content when stacked */
+    }
+    .section-title-right {
+        font-size: 40px;
+        text-align: center; /* Center title */
+    }
+    .vision-features-grid {
+        grid-template-columns: 1fr; /* Stack features in a single column */
+        max-width: 400px; /* Limit width of features */
+        margin: 0 auto 40px auto; /* Center and add margin */
+    }
+    .feature-box {
+        justify-content: center; /* Center content within boxes */
+    }
+    .collaborate-now-link {
+        justify-content: center; /* Center the link */
+    }
+}
+
+@media (max-width: 768px) {
+    .building-vision-section {
+        padding: 60px 0;
+    }
+    .section-title-right {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .building-vision-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-right {
+        font-size: 28px;
+    }
+    .feature-box p {
+        font-size: 15px;
+    }
+}
