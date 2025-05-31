@@ -2039,7 +2039,8 @@ footer p {
 .by-the-numbers-section {
     background-color: #f7f7f7;
     padding: 50px 0;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
   }
   
   .numbers-container {
