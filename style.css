@@ -27,258 +27,37 @@ ul {
     list-style: none;
 }
 
-/* Navbar */
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .navbar {
-    background-color: #222;
-    color: #fff;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-  }
-
-  .logo .logo-text {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .nav-links ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links ul li {
-    margin-left: 30px;
-    position: relative;
-  }
-
-  .nav-links ul li a {
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease;
-  }
-
-  .nav-links ul li a:hover::after {
-    width: 100%;
-  }
-
-  .nav-links ul li a.active {
-    color: #fff;
-  }
-
-  .nav-links ul li a.active::after {
-    width: 100%;
-    background-color: #fff;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    top: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .dropdown-content a {
+/* Remove or modify the existing .logo-text styles if they are no longer needed */
+.logo-text {
+    /* You might want to remove or comment out font-size, color, etc. here */
+    /* For example:
+    font-size: 24px;
     color: white;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
-    font-size: 13px;
-    text-transform: none;
+    */
   }
-
-  .dropdown-content a:hover {
-    background-color: #555;
+  
+  /* Styles for the new logo link and image */
+  .logo-link {
+    /* You might need to adjust display properties based on your existing header layout */
+    display: inline-block; /* Or block, depending on how it's positioned */
+    /* If your original SR had padding or margin, you might apply it here */
   }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
+  
+  .logo-image {
+    height: 50px; /* Adjust this height to match the desired size of your logo */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Helps align with other navigation items if they are inline */
+    /* Add any specific margin/padding if needed to match the original SR's spacing */
+    margin-left: 20px;
   }
-
-  .dropdown i.fa-chevron-down {
-    font-size: 10px;
-    margin-left: 5px;
-  }
-
-  .nav-icons {
-    display: flex;
-    gap: 20px;
-    font-size: 18px;
-  }
-
-  .nav-icons i {
-    cursor: pointer;
-    transition: color 0.3s ease;
-    color: #fff;
-  }
-
-  .nav-icons i:hover {
-    color: #007bff;
-}
-
-
-/* --- Navigation Links (Mobile Specific - Hidden by default) --- */
-/* This section styles how the navigation menu behaves on mobile when hidden and when opening. */
-@media (max-width: 767px) { /* This media query applies styles only on screens 767px wide or less */
-    .nav-links {
-        display: none; /* Hide the navigation links by default on mobile */
-        
-        /* Positioning and styling for the full-screen mobile menu overlay */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent dark overlay */
-        
-        /* Flexbox properties to center menu items vertically and horizontally */
-        flex-direction: column; /* Stack links vertically */
-        justify-content: center; /* Center content vertically */
-        align-items: center; /* Center content horizontally */
-        text-align: center; /* Center text within links */
-        
-        z-index: 99; /* Ensure menu is above page content, but below the navbar itself */
-        
-        /* Initial state for smooth animation (menu starts invisible and above screen) */
-        opacity: 0;
-        transform: translateY(-100%); /* Start menu above the viewport */
-        /* Smooth transition for opacity and transform when menu opens/closes */
-        transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-
-    /* Adjustments for list items and links within the mobile menu */
-    .nav-links ul {
-        flex-direction: column; /* Ensure list items stack vertically in mobile menu */
-    }
-
-    .nav-links ul li {
-        margin: 20px 0; /* More spacing for mobile links */
-    }
-
-    .nav-links ul li a {
-        font-size: 28px; /* Larger font size for mobile ease of use */
-        color: #fff; /* White color for links in the dark overlay */
-    }
-
-    /* Adjustments for dropdowns within the mobile menu */
-    .dropdown .dropdown-content {
-        position: static; /* Remove absolute positioning; flows naturally within the mobile menu */
-        background-color: transparent; /* No background needed for mobile dropdown */
-        box-shadow: none; /* No shadow */
-        width: auto; /* Auto width */
-        padding: 0;
-        margin-top: 10px; /* Space from parent link */
-    }
-
-    .dropdown-content a {
-        padding: 8px 0; /* Adjust padding for mobile dropdown links */
-        font-size: 20px; /* Smaller font for dropdown items */
-        color: rgba(255, 255, 255, 0.8); /* Slightly dimmed color for dropdown items */
-    }
-}
-
-
-/* --- Icon Visibility (Hamburger & Close) --- */
-/* These rules control which icon is visible depending on screen size and menu state */
-
-/* Default state for icons (on desktop or when mobile menu is closed) */
-.nav-icons #hamburgerIcon,
-.nav-icons #closeIcon {
-    display: none; /* Hide both icons by default on desktop */
-}
-
-@media (max-width: 767px) {
-    .nav-icons #hamburgerIcon {
-        display: block; /* Show hamburger icon by default on mobile */
-    }
-
-    .nav-icons #closeIcon {
-        display: none; /* Hide close icon by default on mobile */
-    }
-    
-    /* You might want to hide the search icon on mobile if it clutters the nav-icons space */
-    /* .nav-icons #searchIcon {
-        display: none;
-    } */
-}
-
-
-/* --- State When Mobile Menu is OPEN (Class 'menu-open' added to the '.navbar' by JavaScript) --- */
-/* These styles activate when the 'menu-open' class is present on the '.navbar' element. */
-.navbar.menu-open .nav-links {
-    display: flex; /* Make the navigation links visible */
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Slide down from the top */
-}
-
-/* Toggle icon visibility when menu is open */
-.navbar.menu-open .nav-icons #hamburgerIcon {
-    display: none; /* Hide hamburger when menu is open */
-}
-
-.navbar.menu-open .nav-icons #closeIcon {
-    display: block; /* Show close icon when menu is open */
-}
-
-/* Optional: Hide search icon when menu is open, for a cleaner look */
-.navbar.menu-open .nav-icons #searchIcon {
-    display: none;
-}
-
-/* --- Optional: Prevent Body Scrolling --- */
-/* Add this class to your <body> tag via JavaScript when the menu is open,
-   to prevent the page content from scrolling behind the full-screen menu. */
-body.no-scroll {
-    overflow: hidden;
-}
+  
 
 /* Hero Section */
 .hero-section {
     position: relative;
     width: 100%;
     height: 90vh; /* Adjust as needed */
-    margin-top: 70px; /* To account for fixed navbar height */
     overflow: hidden;
     display: flex;
     align-items: flex-end; /* Align "MODERN" to the bottom-left */
@@ -650,7 +429,7 @@ footer p {
     }
 
     .hero-content h1 {
-        font-size: 12vw;
+        margin-left: -7vh;
     }
 
     .construction-intro .container {
@@ -698,9 +477,8 @@ footer p {
         margin-top: 30px;
         margin-bottom: 0;
     }
-
     .hero-content h1 {
-        font-size: 15vw;
+        font-size: 10vw;
     }
 
     .intro-left h2 {
@@ -2039,7 +1817,7 @@ footer p {
   
   .numbers-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr fr;
     gap: 40px;
     align-items: start;
     max-width: 1100px;
@@ -2097,7 +1875,7 @@ footer p {
   }
   
   .number-card .number {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -2181,6 +1959,10 @@ footer p {
       font-size: 13px;
     }
   }
+
+  .contact-form {
+    margin-top: 10vh;
+  } 
   
 
 .contact-form-section {
@@ -2190,9 +1972,10 @@ footer p {
   font-family: 'Segoe UI', sans-serif;
 }
 
-.contact-form-section h2 {
+.contact-form-section h3 {
   font-size: 26px;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .contact-form-section p {
@@ -2240,8 +2023,4 @@ footer p {
     background-color: 20px;
 }
 
-  
-  
-  
-  
   

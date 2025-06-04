@@ -11,7 +11,186 @@
     <title>Contact</title>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: 'Open Sans', sans-serif;
+          padding-top: 70px;
+        }
+    
+        /* Navbar layout */
+        .navbar {
+          background-color: #222;
+          color: white;
+          padding: 15px 20px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        .navbar a {
+            margin-left: 30px;
+            font-weight: bolder;
+            font-family: 'Open Sans', sans-serif;
+        }
+    
+        .logo-text {
+          font-size: 24px;
+          font-weight: bolder;
+          color: white;
+          text-decoration: none;
+        }
+    
+        .nav-links {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+        }
+    
+        .nav-links ul {
+          list-style: none;
+          display: flex;
+          gap: 30px;
+        }
+        .nav-links ul li a {
+      color: white;
+      position: relative;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0%;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+    
+        .nav-icons {
+          display: flex;
+          gap: 20px;
+          font-size: 18px;
+          color: white;
+          align-items: center;
+        }
+    
+        .nav-icons #hamburgerIcon {
+          display: none; /* hidden on desktop by default */
+        }
+    
+        /* Side menu (HTML structure only) */
+        .side-menu {
+          position: fixed;
+          top: 0;
+          left: -250px;
+          width: 250px;
+          height: 100%;
+          background-color: #111;
+          padding: 20px;
+          transition: left 0.3s ease;
+          z-index: 1100;
+        }
+    
+        .side-menu.open {
+          left: 0;
+        }
+    
+        .side-menu .close-btn {
+          font-size: 24px;
+          color: white;
+          text-align: right;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+    
+        .side-menu ul {
+          list-style: none;
+          padding: 0;
+        }
+    
+        .side-menu ul li {
+          padding: 12px 0;
+        }
+    
+        .side-menu ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 14px;
+        }
+    
+        .side-menu ul li a:hover {
+          color: #007bff;
+        }
+    
+        /* Responsive */
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+          }
+    
+          .nav-icons #hamburgerIcon {
+            display: inline; /* show hamburger only on mobile */
+          }
+        }
+      </style>
+    
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="./index.html" class="logo-link">
+          <img src="./images/WhatsApp Image 2025-06-02 at 09.22.48_8e08baff.jpg" alt="SR Logo" class="logo-image">
+      </a>
+    
+        <div class="nav-links">
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="nav-icons">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
+      </nav>
+    
+      <!-- Side Menu (HTML only for now) -->
+      <div class="side-menu" id="sideMenu">
+        <div class="close-btn" id="closeSideMenu">&times;</div>
+        <ul>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
     <section class="contact-us-section"><div class="container">
         <div class="container">
             <div class="contact-wrapper">
@@ -19,10 +198,11 @@
                     <h3>Let's Connect</h3>
                     <img src="images/67a09b154683945b0cf22d92_hero-02.jpg" alt="Contact Us Image">
                     <p>Send us an email:</p>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:info@example.com">manuelshibu6@gmail.com</a>
                     <p>Give us a call:</p>
-                    <a href="tel:+4065550120">(+406) 555-0120</a>
+                    <a href="tel:+4065550120">+1(319) 333-5483</a>
                     <p>Address:</p>
+                    
                     <address>
                         SHIBU MANUEL <br> SAJEEV REMODELING SERVICES <br> 5610 WESTBURY PL MADISON WI 53711
                     </address>
@@ -55,5 +235,30 @@
     </section>
     <div id="footer-placeholder"></div>
     <script src="component.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburgerIcon");
+        const closeBtn = document.getElementById("closeSideMenu");
+        const sideMenu = document.getElementById("sideMenu");
+  
+        hamburger.addEventListener("click", () => {
+          sideMenu.classList.add("open");
+        });
+  
+        closeBtn.addEventListener("click", () => {
+          sideMenu.classList.remove("open");
+        });
+  
+        // Optional: close on outside click
+        window.addEventListener("click", (e) => {
+          if (
+            !sideMenu.contains(e.target) &&
+            !hamburger.contains(e.target)
+          ) {
+            sideMenu.classList.remove("open");
+          }
+        });
+      });
+    </script>
 </body>
 </html>
